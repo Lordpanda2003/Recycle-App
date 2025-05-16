@@ -1,16 +1,29 @@
-# recycle_app
+# ♻️ Recly - Flutter Recycling App
 
-A new Flutter project.
+Recly is a modern Flutter mobile application designed to promote and facilitate recycling habits in everyday life. It helps users locate recycling centers, learn about recyclable materials, and track their recycling progress.
 
-## Getting Started
+## 📱 Features
 
-This project is a starting point for a Flutter application.
+- 🌍 **Map Integration**: Find nearby recycling centers using GPS.
+- 🧾 **Recyclable Items Info**: Learn what items can be recycled and how.
+- 🗓️ **Reminders**: Get notified to recycle on specific days.
+- 📊 **Progress Tracking**: Track your recycling history and impact.
+- 🔍 **Search & Filter**: Easily search items and filter by material type.
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Getting Started
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To run this app locally:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prerequisites
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- Android Studio or Visual Studio Code
+- A connected device or emulator
+
+### Installation
+
+```bash
+git clone https://github.com/Lordpanda2003/Recycle-App
+cd recycle_app
+flutter pub get
+flutter run
