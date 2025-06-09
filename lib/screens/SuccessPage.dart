@@ -29,13 +29,13 @@ class SuccessPage extends StatelessWidget {
               ),
               SizedBox(height: 32),
              ElevatedButton(
-  onPressed: () => Navigator.pushNamed(context, '/login'),
-  style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.black,
-    foregroundColor: Colors.white,
-    minimumSize: Size(double.infinity, 75),  // keep full width, fixed height
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10), // smaller radius = more square-like corners
+              onPressed: () => Navigator.pushNamed(context, '/login'),
+              style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.black,
+              foregroundColor: Colors.white,
+              minimumSize: Size(double.infinity, 75),  // keep full width, fixed height
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10), // smaller radius = more square-like corners
     ),
   ),
   child: Text("Retour à la connexion"),

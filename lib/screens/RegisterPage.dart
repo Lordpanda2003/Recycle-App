@@ -35,7 +35,7 @@ class RegisterPage extends StatelessWidget {
               _buildTextField("Confirm password", obscureText: true),
               SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, '/home'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
