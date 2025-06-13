@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -9,18 +10,20 @@ class LoginPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: ListView(
             children: [
-              IconButton(
+              SizedBox(height: 16),
+              Align(
                 alignment: Alignment.centerLeft,
-                icon: Icon(Icons.arrow_back),
-                onPressed: () => Navigator.pop(context),
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back, size: 28),
+                  onPressed: () => Navigator.pop(context),
+                ),
               ),
               SizedBox(height: 16),
               Text(
-                "Welcome back! Glad to see you, Again!",
-                textAlign: TextAlign.start,
+                "Welcome back! Glad\nto see you, Again!",
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w600,
                   color: Color(0xFF28B446),
                 ),
               ),
@@ -34,53 +37,73 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, '/forgot');
                   },
-                  child: Text("Forgot Password?"),
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
+                  ),
                 ),
               ),
+              SizedBox(height: 8),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, '/home'),
-                child: Text("Login"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF28B446),
                   foregroundColor: Colors.white,
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(10),
                   ),
+                  elevation: 0,
+                ),
+                child: Text(
+                  "Login",
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               SizedBox(height: 24),
               Row(
                 children: [
-                  Expanded(child: Divider()),
+                  Expanded(child: Divider(thickness: 1)),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Text("Or Login with"),
+                    child: Text(
+                      "Or Login with",
+                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                    ),
                   ),
-                  Expanded(child: Divider()),
+                  Expanded(child: Divider(thickness: 1)),
                 ],
               ),
               SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildSocialButton(Icons.facebook),
+                  _buildSocialButton(FontAwesomeIcons.facebookF),
                   SizedBox(width: 20),
-                  _buildSocialButton(Icons.g_mobiledata),
+                  _buildSocialButton(FontAwesomeIcons.google),
                 ],
               ),
-              SizedBox(height: 24),
-              TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/register'),
-                child: Text.rich(
-                  TextSpan(
-                    text: "Don't have an account? ",
-                    children: [
-                      TextSpan(
-                        text: "Register Now",
-                        style: TextStyle(color: Color(0xFF28B446)),
-                      ),
-                    ],
+              SizedBox(height: 32),
+              Center(
+                child: TextButton(
+                  onPressed: () => Navigator.pushNamed(context, '/register'),
+                  child: Text.rich(
+                    TextSpan(
+                      text: "Don't have an account? ",
+                      style: TextStyle(color: Colors.black54),
+                      children: [
+                        TextSpan(
+                          text: "Register Now",
+                          style: TextStyle(
+                            color: Color(0xFF28B446),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -96,11 +119,16 @@ class LoginPage extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         hintText: hint,
+        hintStyle: TextStyle(color: Colors.grey),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide.none,
         ),
         filled: true,
         fillColor: Colors.grey[100],
+        suffixIcon: obscureText
+            ? Icon(Icons.remove_red_eye_outlined, color: Colors.grey)
+            : null,
       ),
     );
   }
@@ -111,10 +139,10 @@ class LoginPage extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(12),
       ),
       child: IconButton(
-        icon: Icon(icon, size: 30),
+        icon: FaIcon(icon, size: 24, color: Colors.black),
         onPressed: () {},
       ),
     );

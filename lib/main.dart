@@ -7,6 +7,14 @@ import 'screens/search_screen.dart';
 import 'screens/LoginPage_screen.dart';
 import 'screens/itinerary_screen.dart';
 import 'screens/ForgotPasswordPage_screen.dart';
+import 'screens/WelcomePage.dart';
+import 'package:recycle_app/screens/location_detail_screen.dart';
+import 'screens/LicensePage.dart';
+import 'screens/PrivacyPolicyPage.dart';
+import 'screens/TermsOfServicePage.dart';
+import 'screens/Splashscreen.dart';
+import 'screens/Onboardingscreen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,8 +30,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      initialRoute: '/login',
+      initialRoute: '/',
       routes: {
+
+    '/': (context) => SplashScreen(),  
+    '/onboard': (context) => OnboardingScreen(),   
+    '/welcome': (context) => Welcomepage(),    
     '/login': (context) => LoginPage(),
     '/register': (context) => RegisterPage(),
     '/forgot': (context) => ForgotPasswordPage(),
