@@ -19,22 +19,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   // Data for each onboarding page
   final List<OnboardingPageData> onboardingPages = [
     OnboardingPageData(
-      imagePath: 'https://placehold.co/600x300/ADD8E6/000000?text=Waste+Image+1',
+      imagePath: 'assets/images/AdobeStock_290929282-scaled.jpeg',
       title: 'Sell Your Waste Easily',
       description: 'Sell your waste to the nearest collection points and earn rewards!',
     ),
     OnboardingPageData(
-      imagePath: 'https://placehold.co/600x300/ADD8E6/000000?text=Recycle+Image+2',
+      imagePath: 'assets/images/The-Importance-of-Recycling.jpg',
       title: 'Everyone Can Recycle',
       description: 'Recycle used goods and help preserve the beauty and sustainability of our environment.',
     ),
     OnboardingPageData(
-      imagePath: 'https://placehold.co/600x300/ADD8E6/000000?text=Location+Image+3',
+      imagePath: 'assets/images/Recycling-Bin-Crop-1024x704.jpg',
       title: 'Recycle at Nearest Locations',
       description: 'Find convenient recycling centers near you and contribute to a cleaner community.',
     ),
     OnboardingPageData(
-      imagePath: 'https://placehold.co/600x300/ADD8E6/000000?text=Community+Image+4',
+      imagePath: 'assets/images/iStock.jpeg',
       title: 'Join Our Community',
       description: 'Become a part of the waste management movement and shape a sustainable future!',
     ),

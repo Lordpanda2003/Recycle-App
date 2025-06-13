@@ -30,17 +30,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      initialRoute: '/',
+      initialRoute: '/search',
       routes: {
 
     '/': (context) => SplashScreen(),  
-    '/onboard': (context) => OnboardingScreen(),   
+    //'/onboard': (context) => OnboardingScreen(),   
     '/welcome': (context) => Welcomepage(),    
     '/login': (context) => LoginPage(),
     '/register': (context) => RegisterPage(),
     '/forgot': (context) => ForgotPasswordPage(),
     '/reset': (context) => ResetPasswordPage(),
     '/success': (context) => SuccessPage(),
+    '/search': (context) => SearchScreen(),
+
+    
   },
     );
   }
